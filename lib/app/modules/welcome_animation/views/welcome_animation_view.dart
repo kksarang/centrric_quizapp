@@ -13,13 +13,15 @@ class WelcomeAnimationView extends GetView<WelcomeAnimationController> {
       body: Center(
         child: SizedBox(
           height: double.infinity,
-          child: FlipCard(
-            key: controller.cardKey,
-            direction: FlipDirection.VERTICAL,
-            flipOnTouch: false,
-            front: WelcomePage(second: controller.sec),
-            back: WelcomePage(second: controller.sec),
-          ),
+          child: Obx(() {
+            return FlipCard(
+              key: controller.cardKey,
+              direction: FlipDirection.VERTICAL,
+              flipOnTouch: false,
+              front: WelcomePage(second: controller.secondsRemaining.value),
+              back: WelcomePage(second: controller.secondsRemaining.value),
+            );
+          }),
         ),
       ),
     );

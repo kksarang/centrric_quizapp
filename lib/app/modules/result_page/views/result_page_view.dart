@@ -1,9 +1,10 @@
+import 'package:centrric_quizzapp/custom_widget/gradient_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../constants/colors.dart';
 import '../../../../constants/strings.dart';
-import '../../../data/model/question_model.dart';
+import '../../../../custom_widget/custom_theme.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/result_page_controller.dart';
 
@@ -38,60 +39,34 @@ class ResultPageView extends GetView<ResultPageController> {
           SizedBox(
             height: 20.0,
           ),
-          Text(
-            "${controller.score}",
-            style: TextStyle(
-              color: Colors.orange,
-              fontSize: 85.0,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+          Obx(() {
+            return Text(
+              '${controller.score.value}',
+              style: TextStyle(
+                color: Colors.orange,
+                fontSize: 85.0,
+                fontWeight: FontWeight.bold,
+              ),
+            );
+          }),
           SizedBox(
             height: 100.0,
           ),
-          ElevatedButton(
-            onPressed: () {
+          GradientButton(
+            horizontalPadding: 40.0,
+            onTap: () {
               Get.offNamed(Routes.HOME);
             },
-            child: Text(
-              repeatQuizz,
-              style: TextStyle(color: Colors.white),
+            isDisabled: false,
+            child: Center(
+              child: Text(
+                repeatQuizz,
+                style: headline9,
+              ),
             ),
           ),
         ],
       ),
     );
   }
-}
-
-Widget questionWidget(QuestionModel questionModel, void Function() function, bool presed) {
-  return Column(
-    children: [
-      SizedBox(
-        width: double.infinity,
-        height: 200.0,
-        child: Text(
-          "${questionModel.question}",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 22.0,
-          ),
-        ),
-      ),
-      for (int i = 0; i < questionModel.answers!.length; i++)
-        Container(
-          width: double.infinity,
-          height: 50.0,
-          margin: EdgeInsets.only(bottom: 20.0, left: 12.0, right: 12.0),
-          child: RawMaterialButton(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8.0),
-            ),
-            fillColor: AppColors.secondaryColor,
-            onPressed: function,
-            child: Text(questionModel.answers!.keys.toList()[i]),
-          ),
-        )
-    ],
-  );
 }

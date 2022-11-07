@@ -1,15 +1,63 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
+import '../../../data/list/question_list.dart';
+import '../../../data/model/question_model.dart';
+
+class HomeController extends GetxController with GetTickerProviderStateMixin {
   int question_pos = 0;
-  int score = 0;
-  bool btnPressed = false;
+  final score = 0.obs;
+  final btnPressed = false.obs;
   bool answered = false;
-  PageController? _controller;
+  PageController? pagecontroller;
+  int sec = 15;
+  var index = 0;
+
+  late AnimationController animationController;
+
+  late Timer timer;
+  var secondsRemaining = 150000.obs;
+  var initalsecondsRemaining = 3.obs;
+
+  final initalValue = 0.0.obs;
+
+  final questionList = <QuestionModel>[...questions].obs;
+
+  void startTimer() {
+    timer = Timer.periodic(
+      const Duration(microseconds: 100),
+      (timer) {
+        if (secondsRemaining.value > 0) {
+          secondsRemaining.value = secondsRemaining.value - 1;
+        } else {
+          timer.cancel();
+        }
+      },
+    );
+  }
+
+  void initalTimer() {
+    timer = Timer.periodic(
+      const Duration(milliseconds: 300),
+      (timer) {
+        if (initalsecondsRemaining.value > 0) {
+          initalsecondsRemaining.value = initalsecondsRemaining.value - 1;
+        } else {
+          timer.cancel();
+          startTimer();
+          initalValue.value = 0.34;
+        }
+      },
+    );
+  }
 
   @override
-  void initState() {
-    _controller = PageController(initialPage: 0);
+  void onInit() {
+    super.onInit();
+    animationController = AnimationController(vsync: this);
+    initalTimer();
+    pagecontroller = PageController()..addListener(() {});
   }
 }

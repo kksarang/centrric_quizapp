@@ -26,11 +26,8 @@ TextStyle title = GoogleFonts.roboto(
   letterSpacing: 0.15,
 );
 
-TextStyle headline9 = GoogleFonts.roboto(
-  fontWeight: FontWeight.w500,
-  fontSize: 22,
-  letterSpacing: 0.15,
-);
+TextStyle headline9 =
+    GoogleFonts.roboto(fontWeight: FontWeight.w500, fontSize: 22, letterSpacing: 0.15, color: Colors.white);
 TextStyle subtitleLite =
     GoogleFonts.roboto(fontWeight: FontWeight.bold, fontSize: 16, letterSpacing: 0.45, color: Colors.white);
 
