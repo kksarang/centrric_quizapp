@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 import '../../../../constants/colors.dart';
 import '../../../../custom_widget/custom_theme.dart';
 import '../../../../custom_widget/slide_dots.dart';
+import '../../../data/model/slide.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/walkthrough_controller.dart';
-import '../model/slide.dart';
 import 'slideitem.dart';
 
 class WalkthroughView extends GetView<WalkthroughController> {
@@ -66,7 +66,7 @@ class WalkthroughView extends GetView<WalkthroughController> {
                   padding: const EdgeInsets.all(8.0),
                   child: GestureDetector(
                       onTap: () {
-                        Get.offNamed(Routes.HOME);
+                        Get.offNamed(Routes.WELCOME_ANIMATION);
                       },
                       child: Container(
                         width: 380,
@@ -77,7 +77,7 @@ class WalkthroughView extends GetView<WalkthroughController> {
                               colors: [AppColors.appColorPrimary, AppColors.appColorPrimary.withOpacity(.5)]),
                         ),
                         child: Center(
-                          child: Text('QUIZ HOME', style: subtitleLite),
+                          child: Text('START QUIZ', style: subtitleLite),
                         ),
                       )),
                 ),

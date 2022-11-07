@@ -6,7 +6,7 @@ import 'package:lottie/lottie.dart';
 import '../../../../constants/colors.dart';
 import '../../../../constants/dimens.dart';
 import '../../../../custom_widget/custom_theme.dart';
-import '../model/slide.dart';
+import '../../../data/model/slide.dart';
 
 class SlideItems extends StatelessWidget {
   final int index;

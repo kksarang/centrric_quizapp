@@ -1,5 +1,5 @@
-import '../../../../constants/strings.dart';
-import '../../../../generated/assets.dart';
+import '../../../constants/strings.dart';
+import '../../../generated/assets.dart';
 
 class Slide {
   final String imageUrl;

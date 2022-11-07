@@ -9,26 +9,6 @@ class Space {
     return const SizedBox(width: 20);
   }
 
-  static w30() {
-    return const SizedBox(width: 30);
-  }
-
-  static w40() {
-    return const SizedBox(width: 40);
-  }
-
-  static w50() {
-    return const SizedBox(width: 50);
-  }
-
-  static wCustom(double width) {
-    return SizedBox(width: width);
-  }
-
-  static h10() {
-    return const SizedBox(height: 10);
-  }
-
   static h20() {
     return const SizedBox(height: 20);
   }
