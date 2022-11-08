@@ -4,18 +4,25 @@ A new Flutter project.
 
 ## Getting Started
 
-##Responsive
-
-<img width="1440" alt="Screenshot 2022-11-07 at 8 31 16 PM" src="https://user-images.githubusercontent.com/74540209/200343029-3e00f51d-aaba-46e5-b5cb-1945da81d89b.png">
+##Fully Responsive in All emulator
 
 
-
-<img width="1440" alt="Screenshot 2022-11-07 at 8 29 04 PM" src="https://user-images.githubusercontent.com/74540209/200343300-cf09064b-3712-4960-b75a-de02856100c0.png">
-
+<img width="1440" alt="Screenshot 2022-11-08 at 11 53 30 AM" src="https://user-images.githubusercontent.com/74540209/200490670-f0b62684-5d12-4457-9cf2-4d0c8c685a19.png">
 
 
+<img width="1440" alt="Screenshot 2022-11-08 at 11 53 52 AM" src="https://user-images.githubusercontent.com/74540209/200490705-66db2ccd-e0fb-4434-8557-ad40a63acf3e.png">
 
-<img width="1440" alt="Screenshot 2022-11-07 at 8 27 35 PM" src="https://user-images.githubusercontent.com/74540209/200343361-cf351692-4a7a-4044-bd15-c1bce5ae4d85.png">
+
+
+<img width="1440" alt="Screenshot 2022-11-08 at 11 52 22 AM" src="https://user-images.githubusercontent.com/74540209/200490756-b6dc0a7d-9aee-4382-a3f1-b08bb22ad705.png">
+
+
+
+<img width="1440" alt="Screenshot 2022-11-08 at 11 52 39 AM" src="https://user-images.githubusercontent.com/74540209/200490779-40781527-0d09-4c5b-ace9-c80876369951.png">
+
+
+
+<img width="1440" alt="Screenshot 2022-11-08 at 11 54 01 AM" src="https://user-images.githubusercontent.com/74540209/200490812-04b2a951-95e6-4f00-b90a-99022696083f.png">
 
 
 
