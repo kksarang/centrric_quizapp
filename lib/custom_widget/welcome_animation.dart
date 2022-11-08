@@ -20,7 +20,7 @@ class WelcomePage extends StatelessWidget {
       width: double.infinity,
       color: Colors.black,
       child: Center(
-        child: Text(second != 0 ? '$second' : "PLAY", style: body3),
+        child: Text(second != 0 ? '$second' : "GO!", style: body3),
       ),
     );
   }

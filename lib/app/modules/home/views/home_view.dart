@@ -34,9 +34,15 @@ class HomeView extends GetView<HomeController> {
               SizedBox(
                 width: Get.mediaQuery.size.width * 0.09,
               ),
-              Text(
-                "Streak",
-                style: subtitleLite,
+              Container(
+                height: 32.0,
+                decoration: BoxDecoration(color: Colors.orange, borderRadius: BorderRadius.all(Radius.circular(5))),
+                child: Center(
+                  child: Text(
+                    name_player,
+                    style: subtitleLite,
+                  ),
+                ),
               ),
               SizedBox(
                 width: Get.mediaQuery.size.width * 0.09,
@@ -49,7 +55,7 @@ class HomeView extends GetView<HomeController> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text(
-                        "${controller.score.value} ",
+                        "✍${controller.questionList.length}",
                         style: subtitle3,
                       ),
                       Text(
@@ -57,7 +63,7 @@ class HomeView extends GetView<HomeController> {
                         style: subtitle3,
                       ),
                       Text(
-                        "${controller.questionList.length}",
+                        "🏆100 Points",
                         style: subtitle3,
                       ),
                     ],
@@ -78,9 +84,9 @@ class HomeView extends GetView<HomeController> {
             color: Colors.white,
           ),
         ),
-        backgroundColor: AppColors.appBarsColor,
+        backgroundColor: Colors.black,
       ),
-      backgroundColor: AppColors.pripmaryColor,
+      backgroundColor: Color(0xff663e72),
       body: PageView.builder(
         itemCount: questions.length,
         controller: controller.pagecontroller,
@@ -174,7 +180,7 @@ class HomeView extends GetView<HomeController> {
                                             } else {
                                               const snackBar = SnackBar(
                                                 backgroundColor: Colors.red,
-                                                content: Text('Answer is InCorrect'),
+                                                content: Text('Answer is InCorrect !'),
                                               );
                                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                             }

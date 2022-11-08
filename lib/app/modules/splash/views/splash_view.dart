@@ -12,6 +12,7 @@ class SplashView extends GetView<SplashController> {
   Widget build(BuildContext context) {
     Get.put(SplashController());
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
           child: Container(
               width: 500,

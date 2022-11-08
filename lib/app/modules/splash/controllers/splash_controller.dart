@@ -8,7 +8,7 @@ class SplashController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    Timer(Duration(seconds: 2), () {
+    Timer(Duration(seconds: 4), () {
       Get.toNamed(Routes.WALKTHROUGH);
     });
   }
