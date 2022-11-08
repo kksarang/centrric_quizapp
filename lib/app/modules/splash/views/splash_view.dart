@@ -1,3 +1,4 @@
+import 'package:centrric_quizzapp/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -12,7 +13,7 @@ class SplashView extends GetView<SplashController> {
   Widget build(BuildContext context) {
     Get.put(SplashController());
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.black,
       body: Center(
           child: Container(
               width: 500,

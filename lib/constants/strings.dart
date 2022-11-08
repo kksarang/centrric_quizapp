@@ -12,3 +12,4 @@ String repeatQuizz = "Repeat the quiz";
 String scoreIs = "You Score is";
 String congrts = "Congratulations";
 String name_player = " Streak ";
+String start_quizz = "START QUIZ";

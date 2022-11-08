@@ -1,3 +1,4 @@
+import 'package:centrric_quizzapp/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,10 +26,10 @@ class QuizProgressBar extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
               color: second > 70000
-                  ? Colors.green
+                  ? AppColors.green
                   : second > 30000 && second < 70000
-                      ? Colors.orange
-                      : Colors.red),
+                      ? AppColors.orange
+                      : AppColors.red),
         ),
       ],
     );

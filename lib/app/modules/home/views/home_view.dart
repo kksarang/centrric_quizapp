@@ -12,7 +12,6 @@ import '../../../routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +35,7 @@ class HomeView extends GetView<HomeController> {
               ),
               Container(
                 height: 32.0,
-                decoration: BoxDecoration(color: Colors.orange, borderRadius: BorderRadius.all(Radius.circular(5))),
+                decoration: BoxDecoration(color: AppColors.orange, borderRadius: BorderRadius.all(Radius.circular(5))),
                 child: Center(
                   child: Text(
                     name_player,
@@ -69,7 +68,8 @@ class HomeView extends GetView<HomeController> {
                     ],
                   );
                 })),
-                decoration: BoxDecoration(color: Colors.white30, borderRadius: BorderRadius.all(Radius.circular(5))),
+                decoration:
+                    BoxDecoration(color: AppColors.white_shade, borderRadius: BorderRadius.all(Radius.circular(5))),
               ),
               SizedBox(
                 width: Get.mediaQuery.size.width * 0.03,
@@ -84,12 +84,12 @@ class HomeView extends GetView<HomeController> {
             color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: AppColors.black,
       ),
-      backgroundColor: Color(0xff663e72),
+      backgroundColor: AppColors.mainPage_bg_clr,
       body: PageView.builder(
         itemCount: questions.length,
-        controller: controller.pagecontroller,
+        controller: controller.pageController,
         physics: NeverScrollableScrollPhysics(),
         onPageChanged: (page) {
           if (page == questions.length - 1) {
@@ -172,13 +172,14 @@ class HomeView extends GetView<HomeController> {
                                               controller.score.value++;
 
                                               const snackBar = SnackBar(
-                                                duration: Duration(seconds: 5),
+                                                duration: Duration(seconds: 2),
                                                 backgroundColor: Colors.green,
                                                 content: Text('Answer is Correct'),
                                               );
                                               ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                             } else {
                                               const snackBar = SnackBar(
+                                                duration: Duration(seconds: 2),
                                                 backgroundColor: Colors.red,
                                                 content: Text('Answer is InCorrect !'),
                                               );
@@ -203,10 +204,10 @@ class HomeView extends GetView<HomeController> {
                     ),
                     GradientButton(
                       onTap: () {
-                        controller.pagecontroller
+                        controller.pageController
                             ?.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeIn);
                         controller.btnPressed.value = false;
-                        if (controller.pagecontroller!.page?.toInt() == questions.length - 1) {
+                        if (controller.pageController!.page?.toInt() == questions.length - 1) {
                           Get.offNamed(Routes.RESULT_PAGE, arguments: {"Scores": controller.score});
                         } else {
                           // const snackBar = SnackBar(
@@ -214,7 +215,7 @@ class HomeView extends GetView<HomeController> {
                           //   content: Text('Empty'),
                           // );
                           // ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                          controller.pagecontroller!
+                          controller.pageController!
                               .nextPage(duration: Duration(milliseconds: 250), curve: Curves.easeInExpo);
                           controller.secondsRemaining.value = 150000;
                           controller.startTimer();

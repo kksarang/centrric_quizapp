@@ -11,7 +11,7 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
   final score = 0.obs;
   final btnPressed = false.obs;
   bool answered = false;
-  PageController? pagecontroller;
+  PageController? pageController;
   int sec = 15;
   var index = 0;
 
@@ -19,7 +19,7 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
 
   late Timer timer;
   var secondsRemaining = 150000.obs;
-  var initalsecondsRemaining = 3.obs;
+  var initalSecondRemaining = 3.obs;
 
   final initalValue = 0.0.obs;
 
@@ -42,8 +42,8 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
     timer = Timer.periodic(
       const Duration(milliseconds: 300),
       (timer) {
-        if (initalsecondsRemaining.value > 0) {
-          initalsecondsRemaining.value = initalsecondsRemaining.value - 1;
+        if (initalSecondRemaining.value > 0) {
+          initalSecondRemaining.value = initalSecondRemaining.value - 1;
         } else {
           timer.cancel();
           startTimer();
@@ -58,6 +58,6 @@ class HomeController extends GetxController with GetTickerProviderStateMixin {
     super.onInit();
     animationController = AnimationController(vsync: this);
     initalTimer();
-    pagecontroller = PageController()..addListener(() {});
+    pageController = PageController()..addListener(() {});
   }
 }

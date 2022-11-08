@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../constants/colors.dart';
+import '../../../../constants/strings.dart';
 import '../../../../custom_widget/custom_theme.dart';
 import '../../../../custom_widget/slide_dots.dart';
 import '../../../data/model/slide.dart';
@@ -77,7 +78,7 @@ class WalkthroughView extends GetView<WalkthroughController> {
                               colors: [AppColors.appColorPrimary, AppColors.appColorPrimary.withOpacity(.5)]),
                         ),
                         child: Center(
-                          child: Text('START QUIZ', style: subtitleLite),
+                          child: Text(start_quizz, style: subtitleLite),
                         ),
                       )),
                 ),

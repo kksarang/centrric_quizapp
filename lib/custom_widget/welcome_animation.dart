@@ -1,3 +1,4 @@
+import 'package:centrric_quizzapp/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -18,7 +19,7 @@ class WelcomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.black,
+      color: AppColors.black,
       child: Center(
         child: Text(second != 0 ? '$second' : "GO!", style: body3),
       ),

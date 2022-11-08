@@ -27,7 +27,6 @@ class WelcomeAnimationController extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
     super.onInit();
     startTimer();
   }

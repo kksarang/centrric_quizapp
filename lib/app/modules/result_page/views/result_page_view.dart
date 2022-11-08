@@ -12,7 +12,7 @@ class ResultPageView extends GetView<ResultPageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.pripmaryColor,
+      backgroundColor: AppColors.mainPage_bg_clr,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -43,7 +43,7 @@ class ResultPageView extends GetView<ResultPageController> {
             return Text(
               '${controller.score.value}',
               style: TextStyle(
-                color: Colors.orange,
+                color: AppColors.orange,
                 fontSize: 85.0,
                 fontWeight: FontWeight.bold,
               ),
