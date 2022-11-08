@@ -5,6 +5,7 @@ A new Flutter project.
 ## Getting Started
 
 ##Fully Responsive in All emulator
+##Taking Apk in flutter - flutter build apk --release
 
 
 <img width="1440" alt="Screenshot 2022-11-08 at 11 53 30 AM" src="https://user-images.githubusercontent.com/74540209/200490670-f0b62684-5d12-4457-9cf2-4d0c8c685a19.png">
