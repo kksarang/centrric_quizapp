@@ -210,11 +210,11 @@ class HomeView extends GetView<HomeController> {
                         if (controller.pageController!.page?.toInt() == questions.length - 1) {
                           Get.offNamed(Routes.RESULT_PAGE, arguments: {"Scores": controller.score});
                         } else {
-                          // const snackBar = SnackBar(
-                          //   backgroundColor: Colors.orange,
-                          //   content: Text('Empty'),
-                          // );
-                          // ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                          const snackBar = SnackBar(
+                            backgroundColor: Colors.orange,
+                            content: Text('Empty'),
+                          );
+                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
                           controller.pageController!
                               .nextPage(duration: Duration(milliseconds: 250), curve: Curves.easeInExpo);
                           controller.secondsRemaining.value = 150000;
